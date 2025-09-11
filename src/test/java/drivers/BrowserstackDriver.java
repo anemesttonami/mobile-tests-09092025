@@ -39,18 +39,18 @@ public class BrowserstackDriver  implements WebDriverProvider {
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
 
-        try {
-            driver = new AndroidDriver(new URL(String.format("https://%s:%s@hub.browserstack.com/wd/hub", "andrewmartelis_co8mY7" , "WXzwDMADHMg2xZeKr4ry")), options);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-        return driver;
-
 //        try {
-//            return new RemoteWebDriver(
-//                    new URL("https://andrewmartelis_co8mY7:WXzwDMADHMg2xZeKr4ry@hub.browserstack.com/wd/hub"), caps);
+//            driver = new AndroidDriver(new URL(String.format("https://%s:%s@hub.browserstack.com/wd/hub", "andrewmartelis_co8mY7" , "WXzwDMADHMg2xZeKr4ry")), options);
 //        } catch (MalformedURLException e) {
 //            throw new RuntimeException(e);
 //        }
+//        return driver;
+
+        try {
+            return new RemoteWebDriver(
+                    new URL("https://https://hub.browserstack.com/wd/hub"), caps);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
