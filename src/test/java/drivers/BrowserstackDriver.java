@@ -27,7 +27,7 @@ public class BrowserstackDriver implements WebDriverProvider {
 
         // Specify device and os_version for testing
         caps.setCapability("device", "Samsung Galaxy S22 Ultra");
-        caps.setCapability("os_version", "9.0");
+        caps.setCapability("os_version", "12.0");
 
         // Set other BrowserStack capabilities
         caps.setCapability("project", "First Java Project");
