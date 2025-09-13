@@ -1,8 +1,6 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
@@ -26,13 +24,13 @@ public class BrowserstackDriver implements WebDriverProvider {
         caps.setCapability("app", "bs://c00d84e2c0f73c6179645f2b930c1189e816a3e0");
 
         // Specify device and os_version for testing
-        caps.setCapability("device", "Samsung Galaxy S22 Ultra");
-        caps.setCapability("os_version", "12.0");
+        caps.setCapability("device", "Samsung Galaxy S23");
+        caps.setCapability("os_version", "13.0");
 
         // Set other BrowserStack capabilities
-        caps.setCapability("project", "First Java Project");
-        caps.setCapability("build", "browserstack-build-1");
-        caps.setCapability("name", "first_test");
+        caps.setCapability("project", "Andrew Java Appium project");
+        caps.setCapability("build", "12-09-2025");
+        caps.setCapability("name", "test");
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
