@@ -14,6 +14,8 @@ public class IosTests extends TestBase {
 
     @Test
     void OpenStravaTest() {
+        System.out.println("REAL PLATFORM :"+ System.getProperty("platform"));
+
         Allure.step("click join free",()->{
             $(AppiumBy.accessibilityId("Join for free")).shouldBe(Condition.visible).click();
         });

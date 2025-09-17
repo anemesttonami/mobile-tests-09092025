@@ -23,6 +23,8 @@ public class SearchTests extends TestBase {
 
     @Test
     void successfulSearchTest() {
+        System.out.println("REAL PLATFORM :"+ System.getProperty("platform"));
+
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
@@ -32,9 +34,10 @@ public class SearchTests extends TestBase {
                         .shouldHave(sizeGreaterThan(0)));
     }
 
-
     @Test
     void successLeonardoSearchTest() {
+        System.out.println("REAL PLATFORM :"+ System.getProperty("platform"));
+
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Google Maps");
